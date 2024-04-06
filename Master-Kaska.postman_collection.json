@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "f1b2da6e-dfde-4902-a5e4-0105fdc71f0b",
+		"name": "Master-Kaska",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1583384",
+		"_collection_link": "https://rfastcloud.postman.co/workspace/Carvajal-TyS~7917b9f1-5475-4c31-a6d4-da9d4e431d76/collection/1583384-f1b2da6e-dfde-4902-a5e4-0105fdc71f0b?action=share&source=collection_link&creator=1583384"
+	},
+	"item": [
+		{
+			"name": "rabbitMQ",
+			"item": [
+				{
+					"name": "publish",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/publish?x=5&y=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"publish"
+							],
+							"query": [
+								{
+									"key": "x",
+									"value": "5"
+								},
+								{
+									"key": "y",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "venta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\":1,\r\n    \"productos\":[\r\n        {\r\n            \"name\" : \"Coca-Cola\",\r\n            \"stock\" : 2,\r\n            \"price\" : 10.0\r\n        },\r\n        {\r\n            \"name\" : \"Pepsi\",\r\n            \"stock\" : 4,\r\n            \"price\" : 9.9\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\":30,\r\n    \"productos\":[\r\n        {\r\n            \"name\" : \"Coca-Cola\",\r\n            \"stock\" : 2,\r\n            \"price\" : 10.0\r\n        },\r\n        {\r\n            \"name\" : \"Pepsi\",\r\n            \"stock\" : 4,\r\n            \"price\" : 9.9\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"compra"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
